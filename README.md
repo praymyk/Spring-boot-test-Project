@@ -2,7 +2,7 @@
 
 
 <h3> 스프링 부트 환경에서 로그인/게시판 작성 가능한 홈페이지 구현 </h3> 
-<p><img align="center" width="800" alt="image" src="" border-radius="20px"></p>
+<p><img align="center" width="800" alt="image" src="https://github.com/praymyk/Spring-boot-test-Project/tree/master/README/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1(spring%20initializr).png" border-radius="20px"></p>
 
 <br/>
 
