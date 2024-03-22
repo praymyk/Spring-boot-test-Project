@@ -1,4 +1,4 @@
-package com.ys.firstproject.controller.entity;
+package com.ys.firstproject.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

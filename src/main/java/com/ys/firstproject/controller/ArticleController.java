@@ -1,6 +1,6 @@
 package com.ys.firstproject.controller;
 
-import com.ys.firstproject.controller.entity.Article;
+import com.ys.firstproject.entity.Article;
 import com.ys.firstproject.dto.ArticleForm;
 import com.ys.firstproject.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
