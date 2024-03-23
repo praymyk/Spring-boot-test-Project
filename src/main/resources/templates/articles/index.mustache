@@ -19,13 +19,15 @@
         </tr>
         </thead>
         <tbody>
+
         {{#articleEntityList}}
         <tr>
             <th scope="row">{{id}}</th>
-            <td>{{title}}</td>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
             <td>{{content}}</td>
         </tr>
         {{/articleEntityList}}
+
         </tbody>
     </table>
 

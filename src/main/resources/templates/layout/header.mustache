@@ -14,7 +14,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">SpringBoot 연습</a>
+        <a class="navbar-brand" href="/welcome">SpringBoot 연습</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,10 +25,13 @@
                     <a class="nav-link" href="/articles/new">글작성</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"  href="/articles/1">게시글(하나)</a>
+                    <a class="nav-link" href="/articles">게시글(리스트)</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/articles/index">게시글(리스트)</a>
+                    <a class="nav-link" href="/signup">회원가입</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/members">회원전체조회</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -38,6 +41,14 @@
         </div>
     </div>
 </nav>
+
+{{#msg}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+{{/msg}}
 
 </body>
 </html>
