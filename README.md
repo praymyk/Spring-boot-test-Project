@@ -53,5 +53,12 @@
   1. JPA의 CrudRepository 인터페이스에서 기본 CRUD 쿼리문을 메소드로 지원하는 것을 확인했습니다.<br>
   2. DB 테이블을 조인해서 조회할 필요가 있는경우 어떤식으로 쿼리문을 커스텀할수 있을지 여유시간이 된다면 확인해볼것!<br>
   3. jpa는 application.properties 에서 로깅 설정을 할 경우 intelij 내 로그에서 실행된 쿼리문을 확인하기 용이한걸 학습했습니다.<br>
-     오류발생시 문제 파악에 용이하기 때문에 다음 JDBC 환경에서도 동일한 기능이 있을지 체킇해볼 예정.</pre>
+     #JPA 로깅 설정
+     #디버그 레벨 쿼리 출력
+     - logging.level.org.hiernate.SQL=DEBUG
+     #쿼리 로그 줄바꿈하기
+     - spring.jpa.properties.hibernate.format_sql=ture
+     #매개변수 값 보여 주기
+     - logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+     오류발생시 문제 파악에 용이하기 때문에 다음 JDBC 환경에서도 동일한 기능이 있을지 체크해볼 예정.</pre>
 </p>
