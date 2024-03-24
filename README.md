@@ -5,7 +5,7 @@
 <p> pring Legacy + Maven 환경에서 웹페이지 구현을 진행한 만큼 스프링 부트 환경에서 프로젝트 진행을 해보기 위한 연습 <br>
   기본적인 CRUD 기능을 연습할수 있도록 H2 DB+JPA 환경에서 게시글 작성 기능 구현 목표
 </p>
-<p><img align="center" width="800" alt="image" src="https://raw.githubusercontent.com/praymyk/Spring-boot-test-Project/master/README/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1(spring%20initializr).png" border-radius="20px"></p>
+<p><img align="center" width="800" alt="image" src="https://raw.githubusercontent.com/praymyk/Spring-boot-test-Project/master/README/spring%20initializr.png" border-radius="20px"></p>
 
 <br/>
 
@@ -19,18 +19,11 @@
 🟪 기본적인 CRUD 기능 구현 연습을 위한 간단한 페이지 구현
 
 🟪 H2 DB, JPA를 이용 클라이언트 요청 > DTO > Controller > Entity > DB 과정 체험
+
+🟪 InteliJ 터미널을 이용한 Git 관리 
 </pre>
 
 <br/>
-
-<h3>✔️스프링 부트 프로젝트 셋팅</h3>
-<img src="">
-
-<h3>✔️글 작성 기능 구현</h3>
-<img src="">
-
-<h3>✔️게시글 작성/수정 기능 구현</h3>
-<img src="">
 
 <h2> 느낀점 </h2>
 <p>
@@ -45,13 +38,14 @@
   1. 이전에는 클라인트 요청 > VO가공 > Dao(Repository) > DB 직행하는 구조로 프로젝트를 진행했었다. <br>
      스프링부트 연습과정에는 클라이언트 > DTO > Entity > Repository > DB 구조로 실습을 진행했는데 <br>
      DTO와 VO의 차이에 대해서 별도로 확인해볼 필요를 느꼈습니다. <br>
-     또한, Entity와 DTO를 분리하지않고 그대로 View에 노출 시킬 경우 발생하는 문제에대해서 다시한번 돌아보게됐습니다.<br>
-  2. WAS 내장으로 톰캣 서버를 셋팅하던 과정이 생략됩니다.</pre>
+     또한, Entity와 DTO를 분리하지않고 그대로 View에 노출 시킬 경우 발생하는 문제에대해서 다시한번 돌아보게 됨.<br>
+  2. Sprign Legacy + JDBC에는 Table을 생성한 상태에서 DB와 상호작용이 진행됐지만 JPA는 @Entity 어노테이션 클래스 생성시<br>
+     내부적으로 CREATE TABLE 쿼리문이 작성됨을 확인.</pre>
   <br>
-  ✔️ JPA Repository 기능 + DB 관련 기능?
+  ✔️ JPA Repository 기능 + 쿼리문 로그 기능?
   <pre>
   1. JPA의 CrudRepository 인터페이스에서 기본 CRUD 쿼리문을 메소드로 지원하는 것을 확인했습니다.<br>
-  2. DB 테이블을 조인해서 조회할 필요가 있는경우 어떤식으로 쿼리문을 커스텀할수 있을지 여유시간이 된다면 확인해볼것!<br>
+  2. DB 테이블을 조인해서 조회할 필요가 있는경우 어떤식으로 쿼리문을 커스텀할수 있을지 여유시간에 좀더 살펴볼 예정!<br>
   3. jpa는 application.properties 에서 로깅 설정을 할 경우 intelij 내 로그에서 실행된 쿼리문을 확인하기 용이한걸 학습했습니다.<br>
      #JPA 로깅 설정
      #디버그 레벨 쿼리 출력
