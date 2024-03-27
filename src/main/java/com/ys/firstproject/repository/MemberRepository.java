@@ -8,4 +8,5 @@ import java.util.ArrayList;
 public interface MemberRepository extends CrudRepository<Member, Long> {
     @Override
     ArrayList<Member> findAll();
+
 }

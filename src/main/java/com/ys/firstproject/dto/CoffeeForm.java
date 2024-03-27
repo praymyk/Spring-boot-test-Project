@@ -13,7 +13,7 @@ public class CoffeeForm {
 
     private Long id;
     private String name;
-    private Integer price;;
+    private Integer price;
 
     public Coffee toEntity() {
         return new Coffee(id, name, price);
