@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 셀프 체크</title>
+</head>
+<body>
+    <h1 id="h1_body">Hello, World</h1>
+    <input type="text" id="spring_boot"> <button type="button" id="change_button">전송</button>
+
+<script>
+    {
+        let h1Body = document.querySelector("#h1_body");
+        console.log(h1Body);
+
+        const changeBtn = document.querySelector("#change_button");
+        changeBtn.addEventListener("click",function (){
+            let word = document.querySelector("#spring_boot").value;
+            h1Body.textContent = "Hello, " + word;
+            console.log(h1Body);
+
+        });
+
+
+
+    }
+</script>
+</body>
+</html>

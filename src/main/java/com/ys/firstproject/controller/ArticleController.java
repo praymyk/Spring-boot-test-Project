@@ -1,8 +1,10 @@
 package com.ys.firstproject.controller;
 
+import com.ys.firstproject.dto.CommentDto;
 import com.ys.firstproject.entity.Article;
 import com.ys.firstproject.dto.ArticleForm;
 import com.ys.firstproject.repository.ArticleRepository;
+import com.ys.firstproject.service.CommentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,12 +16,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Controller
 public class ArticleController {
     @Autowired
     private ArticleRepository articleRepository;
+    @Autowired
+    private CommentService commentService;
 
     /**
      * 게시글 작성페이지 이동용 메서드
@@ -57,12 +62,16 @@ public class ArticleController {
      * @return 임시로 show(전체 게시판 조회 페이지로 보냄)
      */
     @GetMapping("/articles/{id}")
-    public String show(@PathVariable Long id, Model model){
+    public String show(
+            @PathVariable Long id,
+            Model model){
         log.info("id = " + id);
         // step1. id 조회해 데이터 가져오기
         Article articleEntity =  articleRepository.findById(id).orElse(null);
+        List<CommentDto> commentDtos = commentService.comments(id);
         // step2. 모델 데이터에 등록
         model.addAttribute("article", articleEntity);
+        model.addAttribute("commentDtos", commentDtos);
         // step3. 뷰 페이지 보내기
         return "articles/show";
     }

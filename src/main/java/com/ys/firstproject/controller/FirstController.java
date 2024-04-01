@@ -21,4 +21,9 @@ public class FirstController {
         model.addAttribute("username", "사용자");
         return "bye";
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "test";
+    }
 }
